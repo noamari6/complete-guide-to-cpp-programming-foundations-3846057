@@ -5,9 +5,15 @@
 #include <iostream>
 #include <cstdint>
 
+#define CHECKING
+
 int main(){
     int32_t ammo = 100;
     uint8_t health_items = 5;
+
+#ifdef CHECKING
+std::cout << "[CHECKING] Starting game simulation..." << std::endl;
+#endif
 
     ammo += 200; // Player finds extra ammo
     health_items -= 2; // Player uses some health items
