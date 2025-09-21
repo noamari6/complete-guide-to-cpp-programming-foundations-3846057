@@ -7,9 +7,9 @@
 
 int main(){
     std::vector<int> lapTimes = {92, 85, 88, 90, 87};
-    float average;
-    for(int i=0; i < lapTimes.size(); i++)
-        average += lapTimes[i];
+    float average = 0;
+    for(auto x : lapTimes)
+        average += x;
     average /= lapTimes.size();
 
     std::cout << "The average lap time is: " << average << std::endl;
